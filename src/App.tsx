@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.css';
 import axios from 'axios';
@@ -20,7 +20,6 @@ function App() {
     const [category, setCategory] = useState('');
     const [joke, setJoke] = useState('');
 
-    const btnRef = useRef<HTMLButtonElement>(null);
     useEffect(() => {
         const getData = async () => {
             const response = await axios.get(
